@@ -28,6 +28,7 @@ function startGame () {
 
 
 function checkForWin () {
+  var audio = new Audio('sounds/applause.mp3');
   for (var i = 0; i < board.cells.length; i++) {
     if (board.cells[i].isMine && !board.cells[i].isMarked) {
       return
@@ -36,7 +37,7 @@ function checkForWin () {
       return
     }
     }
-    return lib.displayMessage('You win!')
+    return [lib.displayMessage('You win!'), audio.play()]
   }
  
 function countSurroundingMines (cell) {
