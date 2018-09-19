@@ -50,3 +50,6 @@ function countSurroundingMines (cell) {
   return count
 }
 
+function reset() {
+  location.reload();
+}
